@@ -1,15 +1,17 @@
-const expres = require('express');
+const express = require('express');
 const ejs = require('ejs');
 const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 
-const app = expres();
+const app = express();
 
 const PORT = 5000;
 
 app.get('/', (req, res) => {
     res.render('home');
 });
+
+app.use(express.static('public'));
 
 // set Template Engine
 app.use(expressLayouts);
