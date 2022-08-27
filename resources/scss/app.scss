@@ -21,3 +21,23 @@ nav li a {
         color: $primary;
     }
 }
+
+section.hero {
+    background-color: $secondary;
+}
+
+.pizza-size {
+    background-color: $secondary;
+}
+
+.add-to-cart {
+    border: 2px solid $primary;
+    color: $primary;
+    transition: $smooth;
+
+    &:hover {
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+    }
+}
