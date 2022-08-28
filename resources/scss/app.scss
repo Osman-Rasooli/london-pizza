@@ -42,11 +42,21 @@ section.hero {
     }
 }
 
-.btn-primary {
+.btn-primary,
+.btn-main,
+button.btn-primary {
     background-color: $primary;
     transition: $smooth;
 
     &:hover {
         background-color: $primary-hover;
+    }
+}
+
+.cart {
+    background-color: $secondary;
+
+    .amount {
+        color: $primary;
     }
 }
