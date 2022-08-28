@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/cart', (req, res) => {
+    res.render('customers/cart');
+})
+
 app.use(express.static('public'));
 
 // set Template Engine

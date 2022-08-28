@@ -41,3 +41,12 @@ section.hero {
         color: $pure;
     }
 }
+
+.btn-primary {
+    background-color: $primary;
+    transition: $smooth;
+
+    &:hover {
+        background-color: $primary-hover;
+    }
+}
