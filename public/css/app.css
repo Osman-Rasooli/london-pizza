@@ -18,8 +18,15 @@ nav li a:hover {
   color: #FE5F1E;
 }
 
-section.hero {
+section.hero,
+section.register,
+section.login {
   background-color: #f8f8f8;
+}
+
+section.register,
+section.login {
+  height: calc(100vh - 85px);
 }
 
 .pizza-size {
@@ -54,4 +61,22 @@ button.btn-primary:hover {
 }
 .cart .amount {
   color: #FE5F1E;
+}
+
+.auth-btn {
+  color: #FE5F1E;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.auth-btn:hover {
+  color: #b23301;
+}
+
+.auth-form input {
+  transition: all 0.3s ease-in-out;
+}
+.auth-form input:focus {
+  outline: none;
+  border-color: #FE5F1E;
 }

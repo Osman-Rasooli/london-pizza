@@ -22,13 +22,20 @@ nav li a {
     }
 }
 
-section.hero {
+section.hero, 
+section.register, 
+section.login {
     background-color: $secondary;
+}
+section.register,
+section.login {
+    height: calc(100vh - 85px);
 }
 
 .pizza-size {
     background-color: $secondary;
 }
+
 
 .add-to-cart {
     border: 2px solid $primary;
@@ -58,5 +65,23 @@ button.btn-primary {
 
     .amount {
         color: $primary;
+    }
+}
+
+.auth-btn {
+    color: $primary;
+    text-decoration: none;
+    cursor: pointer;
+    transition: $smooth;
+
+    &:hover {
+        color: $primary-hover;
+    }
+}
+.auth-form input {
+    transition: $smooth;
+    &:focus {
+        outline: none;
+        border-color: $primary;
     }
 }
