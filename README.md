@@ -5,7 +5,7 @@
 :smile:
 
 ### Technologies used
-- `html` `css` `js` `ejs` `jquery` `tailwindcss` `sass` `nodejs` `expressjs` `laravel-mix` 
+- `html` `css` `js` `ejs` `jquery` `tailwindcss` `sass` `nodejs` `expressjs` `laravel-mix` `mongodb`
 
 
 ***To install packages***
