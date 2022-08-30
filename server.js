@@ -9,7 +9,7 @@ const app = express();
 
 const PORT = 5000;
 
-// Database Connectivity
+// Database Connectivity - Database -> Pizza - Collection -> menu
 const uri = "mongodb+srv://admin:&$Lx3ChJQ*gbPq^@mern.tvekf.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
