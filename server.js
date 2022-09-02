@@ -1,23 +1,25 @@
 const express = require('express');
-// const { MongoClient, ServerApiVersion } = require('mongodb');
-// const mongoose = require('mongoose');
 const ejs = require('ejs');
 const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
+const Menu = require('./app/models/menu')
 
 const app = express();
 
 const PORT = 5000;
 
-// // Database Connectivity - Database -> Pizza - Collection -> menu
-// const uri = "mongodb+srv://admin:&$Lx3ChJQ*gbPq^@mern.tvekf.mongodb.net/?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-// client.connect(err => {
-// const collection = client.db("pizza").collection("menus");
-//   // perform actions on the collection object
-//   console.log('database connected!');
-//   // client.close();
-// });
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://admin:london-pizza@cluster0.rgt3mag.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(async(err) => {
+  const collection = await client.db("pizza").collection("menu");
+  // perform actions on the collection object
+  const pizzas = await collection.find().toArray();
+  // console.log(pizzas)
+  // console.log(err)
+  
+});
 
 app.use(express.static('public'));
 
@@ -31,3 +33,4 @@ require('./routes/web')(app);
 app.listen(PORT, () => {
     console.log('Listening on port 5000!');
 })
+
